@@ -23,20 +23,21 @@ public class FormTest {
         $(".custom-control-label").click();
         $("#userNumber").setValue("8926123456");
         $("#dateOfBirthInput").click();
-            $(".react-datepicker__year-select").click();
-                $(byText("1983")).click();
-            $(".react-datepicker__month-select").click();
-                $(byText("May")).click();
-            $(byText("11")).click();
+        $(".react-datepicker__year-select").click();
+        $(byText("1983")).click();
+        $(".react-datepicker__month-select").click();
+        $(byText("May")).click();
+        $(byText("11")).click();
+
         $("#subjectsInput").setValue("Eng");
-            $("#subjectsInput").pressEnter();
+        $("#subjectsInput").pressEnter();
         $(byText("Music")).click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/1.PNG"));
         $("#currentAddress").setValue("Moscow, Main str");
         $("#state").click();
-            $(byText("NCR")).click();
-                $("#city").click();
-                    $(byText("Delhi")).click();
+        $(byText("NCR")).click();
+        $("#city").click();
+        $(byText("Delhi")).click();
         $("#submit").click();
 
         $(".table-responsive").shouldHave(text("Bob"), text("Jones"), text("Jones@ya.ru"), text("Male"), text("8926123456"), text("11 May,1983"), text("English"), text("Music"), text("1.PNG"), text("Moscow, Main str"), text("NCR Delhi"));
