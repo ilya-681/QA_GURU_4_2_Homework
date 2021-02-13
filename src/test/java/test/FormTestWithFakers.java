@@ -69,7 +69,5 @@ public class FormTestWithFakers {
 
         //assert
         $(".table-responsive").shouldHave(text(firstName), text(lastName), text(userEmail), text(gender), text(userPhoneNumber), text(dateOfBirth + " " + monthOfBirth + "," + yearOfBirth), text(subject), text(hobbies), text(picture), text(currentAddress), text(state + " " + city));
-
-
     }
 }

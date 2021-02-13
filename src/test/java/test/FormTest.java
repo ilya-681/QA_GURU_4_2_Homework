@@ -1,9 +1,8 @@
 package test;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.conditions.Text;
+
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
+
 
 import java.io.File;
 
@@ -39,9 +38,7 @@ public class FormTest {
         $("#city").click();
         $(byText("Delhi")).click();
         $("#submit").click();
-
+        //assert
         $(".table-responsive").shouldHave(text("Bob"), text("Jones"), text("Jones@ya.ru"), text("Male"), text("8926123456"), text("11 May,1983"), text("English"), text("Music"), text("1.PNG"), text("Moscow, Main str"), text("NCR Delhi"));
-
-
     }
 }
